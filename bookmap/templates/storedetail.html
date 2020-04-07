@@ -63,7 +63,8 @@
     </script>
     
 
-<div class="contents">  
+<div class="contents">
+    <div class='table-map'>  
     <table>
         {% if store.phone_number != 'nan' %}
         <tr>
@@ -129,6 +130,7 @@
     {% if user.is_authenticated %}
     <div><a class="greenhover stamp" href="javascript:get_stamp();">도장<br>찍기</a></div>
     {% endif %}
+</div>
 </div>
 <script type="text/javascript">
     function get_stamp(){   //도장찍기
@@ -358,7 +360,7 @@
             {% csrf_token %}
             <div class="radio_star" id="star">
                 <input type="radio" name="star" id="shipadd1" value="1" checked/>
-                <label for="shipadd1"><i class="fas fa-star"></i></label>
+                <label for="shipadd1"><i class="fas fa-star" style="color: #FFD757;"></i></label>
                 <input type="radio" name="star" id="shipadd2" value="2" />
                 <label for="shipadd2"><i class="fas fa-star"></i></label>
                 <input type="radio" name="star" id="shipadd3" value="3" />
@@ -412,7 +414,7 @@
             <a href={{review.link}}>
                 <p>{{review.bloggername}} | {{review.postdate}}</p>
                 <h3>{{review.title}}</h3>
-                <h4>{{review.description}}...</h4>
+                <h4>{{review.description}}</h4>
             </a>
         </div>
         <hr>
